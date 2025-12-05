@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import { Bars3Icon, XMarkIcon, MagnifyingGlassIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/vue/24/outline'
+import { Bars3Icon, XMarkIcon, MagnifyingGlassIcon, PhoneIcon, EnvelopeIcon, ComputerDesktopIcon } from '@heroicons/vue/24/outline'
+import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/20/solid'
 
 const mobileMenuOpen = ref(false)
+
+// eBidding portal URL
+const eBiddingPortalUrl = 'https://www.auctionsale.com.my'
 
 const toggleMobileMenu = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value
@@ -89,11 +93,23 @@ const closeMobileMenu = () => {
             <span class="hidden lg:inline">Search</span>
           </button>
 
+          
           <NuxtLink to="/login" class="hidden md:block">
             <BaseButton variant="primary" size="sm">
               Login
             </BaseButton>
           </NuxtLink>
+          <!-- eBidding Portal Button -->
+          <a
+            :href="eBiddingPortalUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hidden md:flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-purple-600 hover:text-purple-700 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors"
+          >
+            <ComputerDesktopIcon class="w-4 h-4" />
+            <span class="hidden lg:inline">eBidding Portal</span>
+            <ArrowTopRightOnSquareIcon class="w-3.5 h-3.5" />
+          </a>
 
           <!-- Mobile Menu Button -->
           <button
@@ -156,7 +172,20 @@ const closeMobileMenu = () => {
           >
             Contact
           </NuxtLink>
-          <div class="pt-4 border-t border-slate-200">
+          <div class="pt-4 border-t border-slate-200 space-y-3">
+            <!-- eBidding Portal Link (Mobile) -->
+            <a
+              :href="eBiddingPortalUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-center gap-2 w-full px-4 py-3 text-sm font-medium text-purple-600 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors"
+              @click="closeMobileMenu"
+            >
+              <ComputerDesktopIcon class="w-5 h-5" />
+              eBidding Portal
+              <ArrowTopRightOnSquareIcon class="w-4 h-4" />
+            </a>
+
             <NuxtLink to="/login" @click="closeMobileMenu">
               <BaseButton variant="primary" size="md" block>
                 Login / Register
