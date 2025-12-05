@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-slate-700 antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-slate-900;
+  }
+}
+
+@layer components {
+  /* Button Styles */
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 active:bg-primary-700 text-white font-semibold text-sm px-6 py-3 rounded-lg shadow-sm hover:shadow-md transition-all duration-150 disabled:bg-slate-400 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-500 hover:bg-secondary-600 text-white font-semibold text-sm px-6 py-3 rounded-lg transition-all duration-150;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white font-semibold text-sm px-6 py-2.5 rounded-lg transition-all duration-150;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent hover:bg-primary-50 text-primary-500 font-medium text-sm px-4 py-3 rounded-lg transition-all duration-150;
+  }
+
+  /* Badge Styles */
+  .badge {
+    @apply inline-flex items-center text-2xs font-bold uppercase tracking-wide px-2 py-1 rounded;
+  }
+
+  .badge-hot {
+    @apply badge bg-red-600 text-white;
+  }
+
+  .badge-new {
+    @apply badge bg-emerald-600 text-white;
+  }
+
+  .badge-reduced {
+    @apply badge bg-blue-600 text-white;
+  }
+
+  .badge-featured {
+    @apply badge bg-secondary-500 text-white;
+  }
+
+  .badge-ebidding {
+    @apply badge bg-purple-50 text-purple-600 border border-purple-200;
+  }
+
+  /* Property Card */
+  .property-card {
+    @apply bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-200 hover:border-slate-300 hover:shadow-card-hover hover:-translate-y-0.5 cursor-pointer;
+  }
+
+  /* Input Styles */
+  .input {
+    @apply w-full text-sm px-4 py-3 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder:text-slate-400 hover:border-slate-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/10 transition-all duration-150 disabled:bg-slate-50 disabled:cursor-not-allowed;
+  }
+
+  .input-error {
+    @apply border-red-500 focus:border-red-500 focus:ring-red-500/10;
+  }
+
+  /* Section Container */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Navigation Links */
+  .nav-link {
+    @apply px-4 py-2 text-sm font-medium text-slate-700 hover:text-primary-500 hover:bg-primary-50 rounded-lg transition-colors;
+  }
+
+  .nav-link-active {
+    @apply text-primary-500 bg-primary-50;
+  }
+}

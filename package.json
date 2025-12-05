@@ -1,0 +1,36 @@
+{
+  "name": "jtraj.com",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdmundHee/jtraj-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdmundHee/jtraj-website/issues"
+  },
+  "homepage": "https://github.com/EdmundHee/jtraj-website#readme",
+  "description": "JTR Auction House - Wireframe Demonstration Website",
+  "dependencies": {
+    "@heroicons/vue": "^2.2.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.19",
+    "nuxt": "^4.2.1",
+    "vue": "^3.5.25"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "typescript": "^5.9.3"
+  }
+}
